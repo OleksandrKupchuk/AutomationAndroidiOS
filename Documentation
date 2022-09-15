@@ -1,3 +1,12 @@
 -----Jenkins-----
 How to install Jenkins on Mac - https://www.youtube.com/watch?v=ANd6Qzkwjus
-Jenkins GitHub integration - https://www.youtube.com/watch?v=rwbN6JjDCXo
+
+Jenkins GitHub integration
+   Для запуски локальної джоби, потрібно зайти в "Manage Jenkins->Global Tool Configuration"
+   знайти пункт "Maven" натиснути "Maven installations" вводимо "Name" і прописуємо "MAVEN_HOME"
+   як установити мавен тут - https://www.youtube.com/watch?v=EoXImdzlAls
+
+   Далі заходимо в "Jenkins->New Item", вказуємо назву проєкту і вибираємо тип наприклад "Freestyle project"
+   В "Build Steps" натискаємо кнопку "Add build step" і вибираємо "Invoke top-level Maven targets" вибираємо
+   версію яку ми прописували в "Global Tool Configuration" в "Goal" прописуємо слово яке стоїть в залежності testng тег <scope>
+   (файл pom.xml в проєкті наприклад <scope>compile</scope>)
