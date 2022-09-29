@@ -1,4 +1,4 @@
-package Pages.Ios;
+package Pages.Ios.IntegrationApp;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.ios.IOSDriver;
@@ -25,6 +25,14 @@ public class ScrollingPage {
         HashMap<String, Object> scrollObject = new HashMap<>();
         scrollObject.put("direction", "down");
         scrollObject.put("name", "99");
+        driver.executeScript("mobile:scroll", scrollObject);
+        return this;
+    }
+
+    public ScrollingPage scrollTo(int number){
+        HashMap<String, Object> scrollObject = new HashMap<>();
+        scrollObject.put("direction", "down");
+        scrollObject.put("name", Integer.toString(number));
         driver.executeScript("mobile:scroll", scrollObject);
         return this;
     }

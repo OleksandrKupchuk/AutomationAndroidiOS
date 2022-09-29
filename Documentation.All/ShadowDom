@@ -1,0 +1,6 @@
+Для того щоб працювати з елементами Shadow Dom
+Потрібно використовувати JS path та JavascriptExecutor приклад коду нижче
+//  Клік по елементу в Shadow Dom
+//        JavascriptExecutor jsExecutor = (JavascriptExecutor)driver;
+//        WebElement element = (WebElement) jsExecutor.executeScript("return document.querySelector(\"body > print-preview-app\").shadowRoot.querySelector(\"#sidebar\").shadowRoot.querySelector(\"print-preview-button-strip\").shadowRoot.querySelector(\"div > cr-button.cancel-button\")");
+//        element.click();

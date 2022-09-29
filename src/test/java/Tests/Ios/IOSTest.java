@@ -1,15 +1,17 @@
 package Tests.Ios;
 
 import Pages.Ios.*;
+import Pages.Ios.IntegrationApp.AlertPage;
+import Pages.Ios.IntegrationApp.AttributesPage;
+import Pages.Ios.IntegrationApp.IntegrationAppStartPage;
+import Pages.Ios.IntegrationApp.ScrollingPage;
 import Pages.Ios.uikitcatalog.DataPickerPage;
 import Pages.Ios.uikitcatalog.ToolBarsPage;
 import Pages.Ios.uikitcatalog.UiKitCatalogStartPage;
 import Pages.Ios.uikitcatalog.toolbars.TintedPage;
 import lombok.SneakyThrows;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class IOSTest extends BaseIos {
@@ -17,8 +19,8 @@ public class IOSTest extends BaseIos {
     @SneakyThrows
     @Test
     public void findInformationInBrowser() {
-        driver.get("https://www.google.com.ua");
-        WebElement searchInGoogle = driver.findElement(By.name("q"));
+        iosDriver.get("https://www.google.com.ua");
+        WebElement searchInGoogle = iosDriver.findElement(By.name("q"));
 //        searchInGoogle.click();
         searchInGoogle.sendKeys("Automation");
 //        driver.getKeyboard().sendKeys("Automation");
@@ -29,56 +31,24 @@ public class IOSTest extends BaseIos {
     }
 
     @Test
-    public void setValueInTextField(){
-        new IntegrationAppStartPage(driver)
-                .clickAlertButton();
-
-        new AlertPage(driver)
-                .setValueOnTextField("automation");
-    }
-
-    @Test
-    public void scrollDown(){
-        new IntegrationAppStartPage(driver)
-                .clickScrollingButton();
-
-        new ScrollingPage(driver)
-                .clickTableViewButton()
-                .scrollTo99()
-                .clickOn99();
-    }
-
-    @Test
-    public void setValueOnSlider(){
-        String value = "0.85";
-
-        new IntegrationAppStartPage(driver)
-                .clickAttributesButton();
-
-        new AttributesPage(driver)
-                .setValueOnSlider(value)
-                .clickBackButton();
-    }
-
-    @Test
     public void setValueOnDataWheel() {
-        new UiKitCatalogStartPage(driver)
+        new UiKitCatalogStartPage(iosDriver)
                 .clickDatePickerButton();
 
-        new DataPickerPage(driver)
+        new DataPickerPage(iosDriver)
                 .setDayHoursMinutes();
     }
 
     @Test
     public void saveToFiles() throws InterruptedException {
-        new UiKitCatalogStartPage(driver)
+        new UiKitCatalogStartPage(iosDriver)
                 .scrollToToolBarButton()
                 .clickToolBarButton();
 
-        new ToolBarsPage(driver)
+        new ToolBarsPage(iosDriver)
                 .clickTintedButton();
 
-        new TintedPage(driver)
+        new TintedPage(iosDriver)
                 .shareButtonClick()
                 .swipe()
                 .saveToFilesButtonClick()

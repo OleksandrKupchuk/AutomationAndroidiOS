@@ -1,4 +1,4 @@
-package Pages.Ios;
+package Pages.Ios.IntegrationApp;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.ios.IOSDriver;

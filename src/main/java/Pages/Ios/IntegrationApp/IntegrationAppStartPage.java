@@ -1,10 +1,8 @@
-package Pages.Ios;
+package Pages.Ios.IntegrationApp;
 
-import Pages.Android.BaseAndroid;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class IntegrationAppStartPage {
     IOSDriver driver;
