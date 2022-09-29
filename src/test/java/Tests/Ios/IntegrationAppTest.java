@@ -2,20 +2,18 @@ package Tests.Ios;
 
 import Base.BaseClass;
 import ConfigDevices.Devices;
-import Pages.Ios.BaseIos;
-import Pages.Ios.IntegrationApp.AlertPage;
 import Pages.Ios.IntegrationApp.AttributesPage;
 import Pages.Ios.IntegrationApp.IntegrationAppStartPage;
 import Pages.Ios.IntegrationApp.ScrollingPage;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import static Data.AppPath.*;
 
-public class IntegrationAppTest extends BaseIos {
+public class IntegrationAppTest extends BaseClass {
 
-    @BeforeTest
+    @BeforeMethod
     public void setup() {
-        String pathApp = "/Users/oleksandrkupchuk/Library/Developer/Xcode/DerivedData/WebDriverAgent-heluqzvshawyozhcvahmgwxcttfj/Build/Products/Debug-iphonesimulator/IntegrationApp.app";
-        BaseClass.setup(Devices.IPHONE_13_PRO_MAX_APP(pathApp));
+        BaseClass.setup(Devices.IPHONE_13_PRO_MAX_APP(INTEGRATION_IOS_APP_PATH));
     }
 
 //    @Test

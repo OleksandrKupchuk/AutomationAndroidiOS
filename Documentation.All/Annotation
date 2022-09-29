@@ -1,0 +1,2 @@
+Для того щоб запускалися тести один за одним потрібно використовувати анотацію @BeforeMethod
+https://stackoverflow.com/questions/50811759/what-is-the-difference-between-beforetest-and-beforemethod-in-testng

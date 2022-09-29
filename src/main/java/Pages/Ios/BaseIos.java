@@ -5,7 +5,9 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import java.net.URL;
@@ -13,7 +15,7 @@ import java.net.URL;
 public class BaseIos {
     public IOSDriver<MobileElement> iosDriver;
 
-    @BeforeTest()
+    @BeforeMethod()
     public void setup() {
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -36,7 +38,7 @@ public class BaseIos {
         }
     }
 
-    @AfterTest()
+    @AfterMethod()
     public void tearDown(){
         iosDriver.quit();
     }
