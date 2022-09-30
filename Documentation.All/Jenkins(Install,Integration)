@@ -1,4 +1,8 @@
 -----Jenkins-----
+http://localhost:8080/login
+userName - admin
+password - admin
+
 How to install Jenkins on Mac - https://www.youtube.com/watch?v=ANd6Qzkwjus
 
 Jenkins GitHub integration
