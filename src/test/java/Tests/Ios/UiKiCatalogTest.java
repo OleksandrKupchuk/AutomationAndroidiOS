@@ -15,7 +15,7 @@ public class UiKiCatalogTest extends BaseClass {
 
     @BeforeMethod
     public void setup() {
-        BaseClass.setup(Devices.IPHONE_13_PRO_MAX_APP(UIKITCATALOG_IOS_APP_PATH));
+        BaseClass.setupApplication(Devices.IPHONE_13_PRO_MAX(UIKITCATALOG_IOS_APP_PATH));
     }
 
 //    @SneakyThrows
@@ -42,7 +42,7 @@ public class UiKiCatalogTest extends BaseClass {
     }
 
     @Test
-    public void saveToFiles() throws InterruptedException {
+    public void saveToFiles() {
         new UiKitCatalogStartPage(iosDriver)
                 .scrollToToolBarButton()
                 .clickToolBarButton();
@@ -54,7 +54,7 @@ public class UiKiCatalogTest extends BaseClass {
                 .shareButtonClick()
                 .swipe()
                 .saveToFilesButtonClick()
-//                .onMyIphoneButtonClick()
+                .onMyIphoneButtonClick()
                 .downloadsButtonClick()
                 .saveButtonClick();
     }

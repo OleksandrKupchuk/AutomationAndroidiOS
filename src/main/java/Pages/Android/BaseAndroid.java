@@ -20,8 +20,8 @@ public class BaseAndroid {
             capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
             capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9.0");
             capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Redmi Note 5");
-            capabilities.setCapability(MobileCapabilityType.UDID, "43c6f2e8");
             capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
+            capabilities.setCapability(MobileCapabilityType.UDID, "43c6f2e8");
             capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 //            capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "60");
 

@@ -1,5 +1,6 @@
 package Pages.Ios.uikitcatalog.toolbars;
 
+import ActionDriver.DriverAction;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
@@ -9,10 +10,12 @@ import org.openqa.selenium.By;
 import java.util.HashMap;
 
 public class TintedPage {
-    IOSDriver driver;
+    private IOSDriver driver;
+    private DriverAction driverAction;
 
     public TintedPage(IOSDriver driver){
         this.driver = driver;
+        driverAction = new DriverAction(driver);
     }
 
     private By shareButton = MobileBy.AccessibilityId("Share");
@@ -41,15 +44,14 @@ public class TintedPage {
         return this;
     }
 
-    public TintedPage onMyIphoneButtonClick() throws InterruptedException {
-        Thread.sleep(2000);
+    public TintedPage onMyIphoneButtonClick() {
+        driverAction.waitForElement(onMyIphoneButton);
         driver.findElement(onMyIphoneButton).click();
-        Thread.sleep(2000);
         return this;
     }
 
-    public TintedPage downloadsButtonClick() throws InterruptedException {
-        Thread.sleep(3000);
+    public TintedPage downloadsButtonClick(){
+        driverAction.waitForElement(downloadsButton);
         driver.findElement(downloadsButton).click();
         return this;
     }

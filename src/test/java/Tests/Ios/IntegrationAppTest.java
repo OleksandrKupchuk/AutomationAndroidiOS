@@ -13,7 +13,7 @@ public class IntegrationAppTest extends BaseClass {
 
     @BeforeMethod
     public void setup() {
-        BaseClass.setup(Devices.IPHONE_13_PRO_MAX_APP(INTEGRATION_IOS_APP_PATH));
+        BaseClass.setupApplication(Devices.IPHONE_13_PRO_MAX(INTEGRATION_IOS_APP_PATH));
     }
 
 //    @Test
@@ -27,12 +27,15 @@ public class IntegrationAppTest extends BaseClass {
 
     @Test
     public void scrollDown(){
+        int number = 21;
+
         new IntegrationAppStartPage(iosDriver)
                 .clickScrollingButton();
 
         new ScrollingPage(iosDriver)
                 .clickTableViewButton()
-                .scrollTo(21);
+                .scrollToNumber(number)
+                .clickOnNumber(number);
     }
 
     @Test

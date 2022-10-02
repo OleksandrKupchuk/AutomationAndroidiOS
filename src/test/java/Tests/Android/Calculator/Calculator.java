@@ -1,20 +1,29 @@
-package Tests.Android;
+package Tests.Android.Calculator;
 
-import Pages.Android.BaseAndroid;
+import Base.BaseClass;
+import ConfigDevices.Devices;
 import Pages.Android.Calculator.CalculatorStartPage;
 import lombok.SneakyThrows;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class AndroidTest extends BaseAndroid {
+import static Data.AppPath.*;
 
-    @SneakyThrows
-    @Test
-    public void findInformationInBrowser() {
+public class Calculator extends BaseClass {
+
+    @BeforeMethod
+    public void setup(){
+        BaseClass.setupApplication(Devices.XIAOMI_REDMI_NOTE_5(ANDROID_APP_PACKAGE_CALCULATOR, ANDROID_APP_ACTIVITY_CALCULATOR));
+    }
+
+//    @SneakyThrows
+//    @Test
+//    public void findInformationInBrowser() {
 //        androidDriver.get("https://www.google.com.ua");
 //        androidDriver.findElementByName("q").sendKeys("Automation");
 ////        androidWait.wait(4000);
 //        androidDriver.findElement(By.name("q")).sendKeys(Keys.ENTER);
-    }
+//    }
 
     @Test
     public void openCalculator() {

@@ -1,16 +1,17 @@
 package Pages.Ios.IntegrationApp;
 
+import ActionDriver.DriverAction;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.By;
 
-import java.util.HashMap;
-
 public class ScrollingPage {
-    IOSDriver driver;
+    private IOSDriver driver;
+    private DriverAction driverAction;
 
     public ScrollingPage(IOSDriver driver){
         this.driver = driver;
+        driverAction = new DriverAction(driver);
     }
 
     private By tableViewButton = MobileBy.xpath("//XCUIElementTypeStaticText[@name=\"TableView\"]");
@@ -21,24 +22,13 @@ public class ScrollingPage {
         return this;
     }
 
-    public ScrollingPage scrollTo99(){
-        HashMap<String, Object> scrollObject = new HashMap<>();
-        scrollObject.put("direction", "down");
-        scrollObject.put("name", "99");
-        driver.executeScript("mobile:scroll", scrollObject);
+    public ScrollingPage scrollToNumber(int number){
+        driverAction.scrollToObject(number);
         return this;
     }
 
-    public ScrollingPage scrollTo(int number){
-        HashMap<String, Object> scrollObject = new HashMap<>();
-        scrollObject.put("direction", "down");
-        scrollObject.put("name", Integer.toString(number));
-        driver.executeScript("mobile:scroll", scrollObject);
-        return this;
-    }
-
-    public ScrollingPage clickOn99(){
-        driver.findElement(nineNine).click();
+    public ScrollingPage clickOnNumber(int number){
+        driver.findElement(MobileBy.xpath("//XCUIElementTypeTable[@name=\"scrollView\"]/XCUIElementTypeCell[" + (number + 1) + "]/XCUIElementTypeOther[1]/XCUIElementTypeOther"));
         return this;
     }
 }

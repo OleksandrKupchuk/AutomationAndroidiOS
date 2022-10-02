@@ -1,0 +1,5 @@
+Для використання методів:
+    - ExpectedConditions.visibilityOfElementLocated
+    - ExpectedConditions.invisibilityOfElementLocated
+Потрібно підключити бібліотеку "selenium-support"
+Залежність для pom.xml брати тут https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support
