@@ -1,4 +1,4 @@
-package Tests.Ios;
+package Tests.Ios.Application;
 
 import Base.BaseClass;
 import ConfigDevices.Devices;

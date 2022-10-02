@@ -1,4 +1,4 @@
-package Tests.Android.AdvancedRecyclerView;
+package Tests.Android.Application.AdvancedRecyclerView;
 
 import Base.BaseClass;
 import ConfigDevices.Devices;
@@ -14,7 +14,7 @@ public class AdvancedRecyclerViewTest extends BaseClass {
 
     @BeforeMethod
     public void setup(){
-        BaseClass.setupApplication(Devices.XIAOMI_REDMI_NOTE_5(ANDROID_APP_PACKAGE_ADVRECYCLERVIEW,
+        BaseClass.setupApplication(Devices.XIAOMI_REDMI_NOTE_5_APP(ANDROID_APP_PACKAGE_ADVRECYCLERVIEW,
                 ANDROID_APP_ACTIVITY_ADVRECYCLERVIEW));
     }
 

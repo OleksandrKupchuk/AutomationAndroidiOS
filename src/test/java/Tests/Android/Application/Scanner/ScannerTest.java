@@ -1,4 +1,4 @@
-package Tests.Android.Scanner;
+package Tests.Android.Application.Scanner;
 
 import Pages.Android.BaseAndroid;
 import Pages.Android.Scanner.ScannerStartPage;

@@ -1,7 +1,8 @@
-package Tests.Ios;
+package Tests.Ios.Application;
 
 import Base.BaseClass;
 import ConfigDevices.Devices;
+import Pages.Ios.IntegrationApp.AlertPage;
 import Pages.Ios.IntegrationApp.AttributesPage;
 import Pages.Ios.IntegrationApp.IntegrationAppStartPage;
 import Pages.Ios.IntegrationApp.ScrollingPage;
@@ -13,17 +14,17 @@ public class IntegrationAppTest extends BaseClass {
 
     @BeforeMethod
     public void setup() {
-        BaseClass.setupApplication(Devices.IPHONE_13_PRO_MAX(INTEGRATION_IOS_APP_PATH));
+        BaseClass.setupApplication(Devices.IPHONE_13_PRO_MAX_APP(INTEGRATION_IOS_APP_PATH));
     }
 
-//    @Test
-//    public void setValueInTextField(){
-//        new IntegrationAppStartPage(iosDriver)
-//                .clickAlertButton();
-//
-//        new AlertPage(iosDriver)
-//                .setValueOnTextField("automation");
-//    }
+    @Test
+    public void setValueInTextField(){
+        new IntegrationAppStartPage(iosDriver)
+                .clickAlertButton();
+
+        new AlertPage(iosDriver)
+                .setValueOnTextField("automation");
+    }
 
     @Test
     public void scrollDown(){
