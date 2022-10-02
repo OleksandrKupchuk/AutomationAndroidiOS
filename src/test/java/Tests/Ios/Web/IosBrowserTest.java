@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 public class IosBrowserTest extends BaseClass {
 
     //Test jenkins trigger
+    //Test jenkins trigger
     @BeforeMethod
     public void setup() {
         BaseClass.setupMobileBrowser(Devices.IPHONE_13_PRO_MAX_WEB());
