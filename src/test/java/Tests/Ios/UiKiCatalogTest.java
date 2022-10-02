@@ -5,11 +5,13 @@ import ConfigDevices.Devices;
 import Pages.Ios.uikitcatalog.DataPickerPage;
 import Pages.Ios.uikitcatalog.ToolBarsPage;
 import Pages.Ios.uikitcatalog.UiKitCatalogStartPage;
+import Pages.Ios.uikitcatalog.WebViewPage;
 import Pages.Ios.uikitcatalog.toolbars.TintedPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static Data.AppPath.*;
+import static Texts.WebViewText.*;
 
 public class UiKiCatalogTest extends BaseClass {
 
@@ -57,5 +59,15 @@ public class UiKiCatalogTest extends BaseClass {
                 .onMyIphoneButtonClick()
                 .downloadsButtonClick()
                 .saveButtonClick();
+    }
+
+    @Test
+    public void switchToWebView() {
+        new UiKitCatalogStartPage(iosDriver)
+                .scrollToWebViewButton()
+                .clickWebViewButton();
+
+        new WebViewPage(iosDriver)
+                .assertText(wkWebViewName);
     }
 }

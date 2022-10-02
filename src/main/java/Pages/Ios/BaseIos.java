@@ -6,9 +6,7 @@ import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 
 import java.net.URL;
 
@@ -36,10 +34,5 @@ public class BaseIos {
             System.out.println("Message is " + exception.getMessage());
             exception.printStackTrace();
         }
-    }
-
-    @AfterMethod()
-    public void tearDown(){
-        iosDriver.quit();
     }
 }
