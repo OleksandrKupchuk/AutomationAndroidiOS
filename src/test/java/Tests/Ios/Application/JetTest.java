@@ -10,6 +10,7 @@ import static Data.AppPath.*;
 
 public class JetTest extends BaseClass {
 
+    //Test hook
     @BeforeMethod
     public void setup(){
         BaseClass.setupApplication(Devices.IPAD_9TH_GENERATION(JET_IOS_APP_PATH));
