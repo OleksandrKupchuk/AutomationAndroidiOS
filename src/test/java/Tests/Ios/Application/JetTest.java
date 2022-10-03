@@ -10,7 +10,7 @@ import static Data.AppPath.*;
 
 public class JetTest extends BaseClass {
 
-    //dsasdas34242
+    //dsasdas34
     @BeforeMethod
     public void setup(){
         BaseClass.setupApplication(Devices.IPAD_9TH_GENERATION(JET_IOS_APP_PATH));
