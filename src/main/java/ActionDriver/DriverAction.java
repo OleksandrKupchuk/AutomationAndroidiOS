@@ -24,6 +24,7 @@ public class DriverAction {
     public DriverAction switchToWebView(){
         int time = 0;
         while (time < DURATION_WAIT_FOR_ELEMENT_IN_SECONDS){
+            time++;
             if (driver.getContextHandles().size() < 2){
                 log.info("Context still WEBVIEW");
             }

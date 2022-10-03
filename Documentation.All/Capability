@@ -1,0 +1,21 @@
+За допомогою коду який наведений нижче, можна прописувати середовище на якому запускатиметься додаток
+capabilities.setCapability("processArguments", "{"
+                + "\"args\" : "
+                + "["
+                + "\"-env_name\","
+                + " \"" + Config.APP_IOS_ENV + "\","
+                + "\"-domain_name\","
+                + " \"" + Config.APP_IOS_DOMAIN + "\""
+                + "]"
+                + "}");
+                
+APP_IOS_ENV = getPropertyValue(
+                    "appIosEnv",
+                    "app.ios.env",
+                    "APP_IOS_ENV",
+                    "");
+APP_IOS_DOMAIN = getPropertyValue(
+                    "appIosDomain",
+                    "app.ios.domain",
+                    "APP_IOS_DOMAIN",
+                    "");

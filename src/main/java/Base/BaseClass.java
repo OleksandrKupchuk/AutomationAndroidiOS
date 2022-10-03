@@ -21,7 +21,6 @@ public class BaseClass {
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             setupDefault(device, capabilities);
-            capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "60");
             capabilities.setCapability(MobileCapabilityType.APP, device.PATH_APP);
 
             URL url = new URL("http://127.0.0.1:4723/wd/hub");
@@ -38,7 +37,6 @@ public class BaseClass {
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             setupDefault(device, capabilities);
-            capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "60");
             capabilities.setCapability("appPackage", device.APP_PACKAGE);
             capabilities.setCapability("appActivity", device.APP_ACTIVITY);
 
@@ -56,7 +54,6 @@ public class BaseClass {
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             setupDefault(device, capabilities);
-            capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "60");
             capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, device.BROWSER_NAME);
 
             URL url = new URL("http://127.0.0.1:4723/wd/hub");
@@ -73,7 +70,6 @@ public class BaseClass {
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             setupDefault(device, capabilities);
-            capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "60");
             capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, device.BROWSER_NAME);
 
             URL url = new URL("http://127.0.0.1:4723/wd/hub");
@@ -91,6 +87,7 @@ public class BaseClass {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, device.PLATFORM_VERSION);
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device.DEVICE_NAME);
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, device.AUTOMATION_NAME);
+        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "60");
     }
 
     @AfterMethod
