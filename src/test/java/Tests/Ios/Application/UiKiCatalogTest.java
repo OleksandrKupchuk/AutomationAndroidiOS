@@ -17,7 +17,7 @@ public class UiKiCatalogTest extends BaseClass {
 
     @BeforeMethod
     public void setup() {
-        BaseClass.setupApplication(Devices.IPHONE_13_PRO_MAX_APP(UIKITCATALOG_IOS_APP_PATH));
+        BaseClass.setupIosApplicationOnLocalhost(Devices.IPHONE_13_PRO_MAX(), UIKITCATALOG_IOS_APP_PATH);
     }
 
     @Test

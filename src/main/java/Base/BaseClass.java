@@ -1,8 +1,6 @@
 package Base;
 
-import ConfigDevices.AndroidDevice;
 import ConfigDevices.Device;
-import ConfigDevices.IosDevice;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -17,11 +15,11 @@ public class BaseClass {
     public static IOSDriver<MobileElement> iosDriver;
     public static AndroidDriver<AndroidElement> androidDriver;
 
-    public static void setupApplication(IosDevice device) {
+    public static void setupIosApplicationOnLocalhost(Device device, String appPath) {
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             setupDefault(device, capabilities);
-            capabilities.setCapability(MobileCapabilityType.APP, device.PATH_APP);
+            capabilities.setCapability(MobileCapabilityType.APP, appPath);
 
             URL url = new URL("http://127.0.0.1:4723/wd/hub");
             iosDriver = new IOSDriver(url, capabilities);
@@ -33,12 +31,14 @@ public class BaseClass {
         }
     }
 
-    public static void setupApplication(AndroidDevice device) {
+    public static void setupAndroidApplicationOnlocalhost(Device device, String appPackage, String appActivity) {
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             setupDefault(device, capabilities);
-            capabilities.setCapability("appPackage", device.APP_PACKAGE);
-            capabilities.setCapability("appActivity", device.APP_ACTIVITY);
+            capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+            capabilities.setCapability("ignoreUnimportantViews", true);
+            capabilities.setCapability("appPackage", appPackage);
+            capabilities.setCapability("appActivity", appActivity);
 
             URL url = new URL("http://127.0.0.1:4723/wd/hub");
             androidDriver = new AndroidDriver(url, capabilities);
@@ -50,14 +50,21 @@ public class BaseClass {
         }
     }
 
-    public static void setupMobileBrowser(IosDevice device) {
+    public static void setupApplicationOnBrowserStack(Device device) {
         try {
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            setupDefault(device, capabilities);
-            capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, device.BROWSER_NAME);
+            String userName = "oleksandrkupchuk_XsRkH7";
+            String accessKey = "mkD6pivwwsmcQRGmhjqV";
 
-            URL url = new URL("http://127.0.0.1:4723/wd/hub");
-            iosDriver = new IOSDriver(url, capabilities);
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("device", device.DEVICE_NAME);
+            capabilities.setCapability("os_version", device.PLATFORM_VERSION);
+            capabilities.setCapability("project", "Automation");
+            capabilities.setCapability("build", "Run test");
+            capabilities.setCapability("name", "Bstack-[Java] Sample Test");
+            capabilities.setCapability("app", device.APP_URL);
+
+            URL url = new URL("https://" + userName + ":" + accessKey +"@hub-cloud.browserstack.com/wd/hub");
+            androidDriver = new AndroidDriver(url, capabilities);
         }
         catch (Exception exception){
             System.out.println("Cause is " + exception.getCause());
@@ -66,7 +73,7 @@ public class BaseClass {
         }
     }
 
-    public static void setupMobileBrowser(AndroidDevice device) {
+    public static void setupMobileBrowserOnLocalhost(Device device) {
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             setupDefault(device, capabilities);

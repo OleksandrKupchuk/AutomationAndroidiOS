@@ -14,8 +14,7 @@ public class AdvancedRecyclerViewTest extends BaseClass {
 
     @BeforeMethod
     public void setup(){
-        BaseClass.setupApplication(Devices.XIAOMI_REDMI_NOTE_5_APP(ANDROID_APP_PACKAGE_ADVRECYCLERVIEW,
-                ANDROID_APP_ACTIVITY_ADVRECYCLERVIEW));
+        BaseClass.setupApplicationOnBrowserStack(Devices.SAMSUNG_S10PLUS_APP());
     }
 
     @Test

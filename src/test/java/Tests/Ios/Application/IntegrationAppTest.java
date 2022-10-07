@@ -14,7 +14,7 @@ public class IntegrationAppTest extends BaseClass {
 
     @BeforeMethod
     public void setup() {
-        BaseClass.setupApplication(Devices.IPHONE_13_PRO_MAX_APP(INTEGRATION_IOS_APP_PATH));
+        BaseClass.setupIosApplicationOnLocalhost(Devices.IPHONE_13_PRO_MAX(), INTEGRATION_IOS_APP_PATH);
     }
 
     @Test

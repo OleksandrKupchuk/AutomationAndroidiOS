@@ -12,7 +12,7 @@ public class AndroidBrowserTest extends BaseClass {
 
     @BeforeMethod
     public void setup(){
-        BaseClass.setupMobileBrowser(Devices.XIAOMI_REDMI_NOTE_5_WEB());
+        BaseClass.setupMobileBrowserOnLocalhost(Devices.XIAOMI_REDMI_NOTE_5());
     }
 
     @SneakyThrows

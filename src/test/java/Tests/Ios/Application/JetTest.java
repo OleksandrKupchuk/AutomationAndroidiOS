@@ -13,7 +13,7 @@ public class JetTest extends BaseClass {
     //dsasdas
     @BeforeMethod
     public void setup(){
-        BaseClass.setupApplication(Devices.IPAD_9TH_GENERATION(JET_IOS_APP_PATH));
+        BaseClass.setupIosApplicationOnLocalhost(Devices.IPAD_9TH_GENERATION(), JET_IOS_APP_PATH);
     }
 
     @Test

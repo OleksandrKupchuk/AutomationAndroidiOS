@@ -1,0 +1,4 @@
+Інтеграція з Browserstack
+https://www.browserstack.com/docs/app-automate/appium/getting-started/java
+
+Щоб отримати url app можна прописати команду в консолі або заванантажити апку на браузерстек і він видасть url

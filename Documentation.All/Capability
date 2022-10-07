@@ -19,3 +19,11 @@ APP_IOS_DOMAIN = getPropertyValue(
                     "app.ios.domain",
                     "APP_IOS_DOMAIN",
                     "");
+
+# App settings
+#app.ios.appPath=sauce-storage:VBI.zip
+app.ios.env=vbi-regression
+app.ios.domain=ext.digital-ks.net
+
+app.ios.appPath=bs://b98e796387ffeb27a7e15c202f26eaa8d7e36ab8
+ios.platformVersion=14
