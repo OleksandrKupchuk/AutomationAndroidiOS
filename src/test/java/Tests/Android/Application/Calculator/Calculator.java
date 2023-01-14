@@ -12,7 +12,7 @@ public class Calculator extends BaseClass {
 
     @BeforeMethod
     public void setup() {
-        BaseClass.setupAndroidApplicationOnlocalhost(Devices.XIAOMI_REDMI_NOTE_5(), ANDROID_APP_PACKAGE_CALCULATOR, ANDROID_APP_ACTIVITY_CALCULATOR);
+        BaseClass.setupAndroidApplicationOnLocalhost(Devices.XIAOMI_REDMI_NOTE_5(), ANDROID_APP_PACKAGE_CALCULATOR, ANDROID_APP_ACTIVITY_CALCULATOR);
     }
 
     @Test

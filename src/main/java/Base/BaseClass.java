@@ -18,7 +18,7 @@ public class BaseClass {
     public static void setupIosApplicationOnLocalhost(Device device, String appPath) {
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            setupDefault(device, capabilities);
+            setupDefaultCapability(device, capabilities);
             capabilities.setCapability(MobileCapabilityType.APP, appPath);
 
             URL url = new URL("http://127.0.0.1:4723/wd/hub");
@@ -31,10 +31,10 @@ public class BaseClass {
         }
     }
 
-    public static void setupAndroidApplicationOnlocalhost(Device device, String appPackage, String appActivity) {
+    public static void setupAndroidApplicationOnLocalhost(Device device, String appPackage, String appActivity) {
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            setupDefault(device, capabilities);
+            setupDefaultCapability(device, capabilities);
             capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
             capabilities.setCapability("ignoreUnimportantViews", true);
             capabilities.setCapability("appPackage", appPackage);
@@ -76,7 +76,7 @@ public class BaseClass {
     public static void setupMobileBrowserOnLocalhost(Device device) {
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            setupDefault(device, capabilities);
+            setupDefaultCapability(device, capabilities);
             capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, device.BROWSER_NAME);
 
             URL url = new URL("http://127.0.0.1:4723/wd/hub");
@@ -89,7 +89,7 @@ public class BaseClass {
         }
     }
 
-    private static void setupDefault(Device device, DesiredCapabilities capabilities){
+    private static void setupDefaultCapability(Device device,DesiredCapabilities capabilities){
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, device.PLATFORM_NAME);
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, device.PLATFORM_VERSION);
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device.DEVICE_NAME);
