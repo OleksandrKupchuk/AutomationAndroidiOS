@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="HelloTestNgSuite">
+    <test name="HelloWorldTest" thread-count="10" parallel="methods">
+        <packages>
+            <package name="Tests/Android/Application/AdvancedRecyclerView"/>
+        </packages>
+<!--        <classes>-->
+<!--            <class name="/Users/oleksandrkupchuk/AppProject/src/test/java/Tests/Android/Application/AdvancedRecyclerView/AdvancedRecyclerViewTest"/>-->
+<!--        </classes>-->
+    </test>
+</suite>

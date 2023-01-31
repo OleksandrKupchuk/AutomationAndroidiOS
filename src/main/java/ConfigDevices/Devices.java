@@ -37,11 +37,11 @@ public class Devices {
     }
 
     public static Device SAMSUNG_S10PLUS_APP(){
-        Device xiaomi_redmi_note_5 = new Device();
-        xiaomi_redmi_note_5.platformType = PlatformType.ANDROID;
-        xiaomi_redmi_note_5.PLATFORM_NAME = "Android";
-        xiaomi_redmi_note_5.PLATFORM_VERSION = "9.0";
-        xiaomi_redmi_note_5.DEVICE_NAME = "Samsung Galaxy S10 Plus";
-        return xiaomi_redmi_note_5;
+        Device samsung_s10plus = new Device();
+        samsung_s10plus.platformType = PlatformType.ANDROID;
+        samsung_s10plus.PLATFORM_NAME = "Android";
+        samsung_s10plus.PLATFORM_VERSION = "9.0";
+        samsung_s10plus.DEVICE_NAME = "Samsung Galaxy S10 Plus";
+        return samsung_s10plus;
     }
 }

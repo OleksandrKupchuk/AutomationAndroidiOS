@@ -9,7 +9,7 @@ public class AppPath {
     //ANDROID
     public static final String ANDROID_APP_PACKAGE_ADVRECYCLERVIEW = "com.h6ah4i.android.example.advrecyclerview";
     public static final String ANDROID_APP_ACTIVITY_ADVRECYCLERVIEW = "com.h6ah4i.android.example.advrecyclerview.launcher.MainActivity";
-    public static final String ANDROID_APP_URL_ADVRECYCLERVIEW = "bs://6c7afa4a77e483738c52195489c7eb265f029101";
+    public static final String ANDROID_APP_URL_ADVRECYCLERVIEW = "bs://940f423c6c37fe6dc497568e34d779f41f4101a1";
 
     public static final String ANDROID_APP_PACKAGE_CALCULATOR = "com.miui.calculator";
     public static final String ANDROID_APP_ACTIVITY_CALCULATOR = "com.miui.calculator.cal.CalculatorActivity";

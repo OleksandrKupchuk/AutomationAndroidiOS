@@ -14,10 +14,10 @@ public class AdvancedRecyclerViewTest extends BaseClass {
 
     @BeforeMethod
     public void setup(){
-        BaseClass.setupApplicationOnBrowserStack(Devices.SAMSUNG_S10PLUS_APP());
+        BaseClass.setupApplicationOnBrowserStack(Devices.SAMSUNG_S10PLUS_APP(), ANDROID_APP_URL_ADVRECYCLERVIEW);
     }
 
-    @Test
+    @Test(priority = 1, description = "test")
     public void dragItemToNewPosition(){
 
         new AdvancedRecyclerViewStartPage(androidDriver)

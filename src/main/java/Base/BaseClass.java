@@ -50,7 +50,7 @@ public class BaseClass {
         }
     }
 
-    public static void setupApplicationOnBrowserStack(Device device) {
+    public static void setupApplicationOnBrowserStack(Device device, String appUrl) {
         try {
             String userName = "oleksandrkupchuk_XsRkH7";
             String accessKey = "mkD6pivwwsmcQRGmhjqV";
@@ -61,7 +61,7 @@ public class BaseClass {
             capabilities.setCapability("project", "Automation");
             capabilities.setCapability("build", "Run test");
             capabilities.setCapability("name", "Bstack-[Java] Sample Test");
-            capabilities.setCapability("app", device.APP_URL);
+            capabilities.setCapability("app", appUrl);
 
             URL url = new URL("https://" + userName + ":" + accessKey +"@hub-cloud.browserstack.com/wd/hub");
             androidDriver = new AndroidDriver(url, capabilities);

@@ -71,7 +71,8 @@ public class DriverAction {
 
     public DriverAction waitForElement(By element){
         WebDriverWait wait = new WebDriverWait(driver, DURATION_WAIT_FOR_ELEMENT_IN_SECONDS);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+        wait.until(isVisible -> ExpectedConditions.visibilityOfElementLocated(element));
         return this;
     }
 }
